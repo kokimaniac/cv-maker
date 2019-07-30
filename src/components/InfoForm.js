@@ -15,6 +15,9 @@ class InfoForm extends Component {
                             className="form-control"
                             name="jobProfile"
                             placeholder="Your job profile (eg): Backend Developer"
+                            id="jobProfile"
+                            onChange={this.props.onChange}
+                            value={this.props.formValues.jobProfile}
                             />
                         </div>
                     </div>
@@ -26,6 +29,9 @@ class InfoForm extends Component {
                             className="form-control"
                             name="firstName"
                             placeholder="Your first name"
+                            id="firstName"
+                            onChange={this.props.onChange}
+                            value={this.props.formValues.firstName}
                             />
                         </div>
                         <div className="form-group col">
@@ -34,6 +40,9 @@ class InfoForm extends Component {
                             className="form-control"
                             name="lastName"
                             placeholder="Your last name"
+                            id="lastName"
+                            onChange={this.props.onChange}
+                            value={this.props.formValues.lastName}
                             />
                         </div>
                     </div>
@@ -42,19 +51,26 @@ class InfoForm extends Component {
                         <div className="form-group col">
                             <input
                             type="text"
-                            name="address"
                             className="form-control"
+                            name="address"
                             placeholder="Your address (format): Street/Zone. Name Street/Zone"
+                            id="address"
+                            onChange={this.props.onChange}
+                            value={this.props.formValues.address}
                             />
                         </div>
                         <div className="form-group col-2">
-                            <select className="form-control" name="cellphone">
+                            <select className="form-control" name="codeRegion" id="codeRegion"
+                            onChange={this.props.onChange}>
                                 <option value="none" defaultValue={true}>-select-</option>
-                                <option value="">Argentina</option>
-                                <option value="">Brasil</option>
-                                <option value="">Bolivia</option>
-                                <option value="">Chile</option>
-                                <option value="">Colombia</option>
+                                <option value="+591">Bolivia</option>
+                                <option value="+55">Brasil</option>
+                                <option value="+57">Colombia</option>
+                                <option value="+593">Ecuador</option>
+                                <option value="+595">Paraguay</option>
+                                <option value="+51">Perú</option>
+                                <option value="+598">Uruguay</option>
+                                <option value="+58">Venezuela</option>
                             </select>
                         </div>
                         <div className="form-group col-4">
@@ -63,31 +79,39 @@ class InfoForm extends Component {
                             name="cellphone"
                             className="form-control"
                             placeholder="Cellphone number with no country code"
+                            id="cellphone"
+                            onChange={this.props.onChange}
+                            value={this.props.formValues.cellphone}
                             />
                         </div>
                     </div>
                     <div className="form-row">
                         <div className="form-group col-2">
-                            <select className="form-control" name="contact">
-                                <option value="GMail">gmail</option>
-                                <option value="Outlook">outlook</option>
-                                <option value="Yahoo">yahoo!</option>
-                                <option value="GitHub">github</option>
-                                <option value="GitLab">gitlab</option>
+                            <select className="form-control" name="contactService" id="contactService">
+                                <option value="GMail">GMail</option>
+                                <option value="Outlook">Outlook</option>
+                                <option value="Yahoo">Yahoo!</option>
+                                <option value="GitHub">GitHub</option>
+                                <option value="GitLab">GitLab</option>
+                                <option value="Twitter">Twitter</option>
                                 <option value="Wordpress">wordpPress</option>
-                                <option></option>
                             </select>
                         </div>
                         <div className="form-group col">
                             <input
                             type="text"
-                            name="contact"
+                            name="userName"
                             className="form-control"
                             placeholder="Put your email or username that belongs to the service"
+                            id="userName"
                             />
                         </div>
                         <div className="form-group col-2">
-                            <button type="button" className="btn btn-outline-primary">add</button>
+                            <button
+                            type="button"
+                            className="btn btn-outline-primary"
+                            onClick={this.props.onClick}>add
+                            </button>
                         </div>
                     </div>
                     <div className="form-row">
