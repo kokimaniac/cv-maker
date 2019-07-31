@@ -1,6 +1,7 @@
 import React from 'react'
-
+//component
 import FormHeader from './FormHeader'
+import SelectYear from './SelectYear.jsx'
 
 function EducationForm (props) {
     let years = []
@@ -9,23 +10,10 @@ function EducationForm (props) {
     }
     return (
         <React.Fragment>
-            <FormHeader name="Education Form" />
+            <FormHeader name="Education" />
             <div className="form-row">
-                <div className="form-group col-2">
-                    <select name="startEducation" className="form-control"
-                    id="startEducation">
-                        <option>start at</option>
-                        {years.map(item=><option value={item}>{item}</option>)}
-                    </select>
-                </div>
-                <div className="form-group col-2">
-                    <select name="endEducation" className="form-control"
-                    id="endEducation">
-                        <option>ended at</option>
-                        {years.map(item=><option value={item}>{item}</option>)}
-                        <option value="-">on course</option>
-                    </select>
-                </div>
+                <SelectYear idName="startEducation" name="start at" />
+                <SelectYear idName="endEducation" name="end at" />
                 <div className="form-group col">
                     <input
                     type="text"

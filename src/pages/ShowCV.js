@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
+//import md5 from 'md5'
 //components
-import Header from './components/Header'
+import HeaderCV from '../components/HeaderCV.jsx'
 class ShowCV extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header name="Show CV" />
-                <div className="container">
-                    <div className="row">
-                        <div className="col">
-
-                        </div>
-                    </div>
-                </div>
+                <HeaderCV info="Hi!" />
             </React.Fragment>
         )
     }

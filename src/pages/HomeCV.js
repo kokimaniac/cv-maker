@@ -11,9 +11,7 @@ class HomeCV extends Component {
                     <div className="row">
                         <div className="col">
                             <p className="display-4">
-                                This is an experimental CV maker. <br />
-                                If you think this CV maker can get better fork it! <br />
-                                Otherwise try this, give it a chance!
+                                This is an experimental Curriculum Vitae maker. <br />
                             </p>
                         </div>
                     </div>
