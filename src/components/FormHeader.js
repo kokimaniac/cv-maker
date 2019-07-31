@@ -5,7 +5,7 @@ function FormHeader (props) {
         backgroundColor: 'rgb(200, 200, 244)'
     }
     return (
-        <header style={style} className="display-4">{props.name}</header>
+        <header style={style} className="display-4 mb-2">{props.name}</header>
     )
 }
 
