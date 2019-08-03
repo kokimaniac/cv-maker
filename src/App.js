@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import MakeCV from './pages/MakeCV'
 import ShowCV from './pages/ShowCV'
 import HomeCV from './pages/HomeCV'
+//styles
+import './global.css'
 
 function App () {
 	return (

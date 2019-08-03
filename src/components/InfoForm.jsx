@@ -1,6 +1,16 @@
 import React from 'react'
 //components
 import FormHeader from './FormHeader'
+//icons
+import githubLogo from './icons/github-logo.png'
+import gitlabLogo from './icons/gitlab-logo.png'
+import twitterLogo from './icons/twitter-logo.png'
+import outlookLogo from './icons/outlook-logo.png'
+import gmailLogo from './icons/gmail-logo.png'
+import yahooLogo from './icons/yahoo-logo.png'
+import wordpressLogo from './icons/wordpress-logo.png'
+import linkedinLogo from './icons/linkedin-logo.png'
+
 function InfoForm (props) {
     const codes = [
         { code: "+591", country: "Bolivia"},
@@ -12,7 +22,31 @@ function InfoForm (props) {
         { code: "+58", country: "Venezuela" }
     ]
     const contacts = [
-        "Twitter", "GMail", "Outlook", "Yahoo!", "LinkedIn", "GitHub", "GitLab", "WordPress"
+        {
+            name: "Twitter",
+            icon: twitterLogo
+        }, {
+            name: "GMail",
+            icon: gmailLogo
+        }, {
+            name: "Outlook",
+            icon: outlookLogo
+        }, {
+            name: "Yahoo!",
+            icon: yahooLogo
+        }, {
+            name: "LinkedIn",
+            icon: linkedinLogo
+        }, {
+            name: "GitHub",
+            icon: githubLogo
+        }, {
+            name: "GitLab",
+            icon: gitlabLogo
+        }, {
+            name: "WordPress",
+            icon: wordpressLogo
+        }
     ]
     return (
         <React.Fragment>
@@ -94,7 +128,11 @@ function InfoForm (props) {
                 <div className="form-group col-2">
                     <select className="form-control" name="contactService" id="contactService">
                         {contacts.map((item, index)=>{
-                            return <option key={index} value={item}>{item}</option>
+                            return (
+                                <option key={index} value={item.icon}>
+                                    {item.name}
+                                </option>
+                            )
                         })}
                     </select>
                 </div>
@@ -103,7 +141,7 @@ function InfoForm (props) {
                     type="text"
                     name="userName"
                     className="form-control"
-                    placeholder="Put your email or username that belongs to the service"
+                    placeholder="Fill this field with your email or url if corresponds"
                     id="userName"
                     />
                 </div>

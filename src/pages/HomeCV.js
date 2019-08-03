@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 //component
 import Header from './components/Header'
+//pages
+
+
 class HomeCV extends Component {
     render() {
         return (

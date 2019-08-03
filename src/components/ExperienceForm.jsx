@@ -22,6 +22,19 @@ function ExperienceForm (props) {
             </div>
             <div className="form-row">
                 <div className="form-group col">
+                    <textarea
+                    id="jobResume"
+                    name="jobResume"
+                    className="form-control"
+                    placeholder="Write shortly gained experience on the job."
+                    rows="5"
+                    onChange={props.onChange}
+                    wrap="hard"
+                    ></textarea>
+                </div>
+            </div>
+            <div className="form-row">
+                <div className="form-group col">
                     <input
                     type="text"
                     name="jobPosition"

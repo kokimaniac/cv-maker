@@ -1,0 +1,14 @@
+header {
+    font-size: 60px;
+    font-weight: bold;
+}
+.subHeader {
+    font-size: 40px;
+}
+
+#info, #contact {
+    display: inline-table;
+}
+#info {
+    max-width: 300px;
+}

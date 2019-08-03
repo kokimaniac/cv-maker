@@ -7,6 +7,7 @@ import EducationForm from '../components/EducationForm.jsx'
 import SkillsForm from '../components/SkillsForm.jsx'
 import CoursesForm from '../components/CoursesForm.jsx'
 import ExperienceForm from '../components/ExperienceForm.jsx'
+import ShowCV from './ShowCV';
 
 class MakeCV extends Component {
     constructor(props) {
@@ -35,10 +36,12 @@ class MakeCV extends Component {
     }
 
     handleInfoClick = () => {
+        let servSelect = document.getElementById("contactService")
         let data = {
             id: md5(`in${this.state.contact.length}`),
             userName: document.getElementById("userName").value,
-            contactService: document.getElementById("contactService").value
+            icon: servSelect.value,
+            contactService: servSelect.options[servSelect.selectedIndex].text
         }
 
         this.setState(prevState=>({
@@ -46,6 +49,10 @@ class MakeCV extends Component {
                 ...prevState.contact, {...data}
             ]
         }))
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log(prevProps)
     }
 
     handleCourseClick = () => {
@@ -96,10 +103,11 @@ class MakeCV extends Component {
     handleExperienceClick = () => {
         const data = {
             id: md5(`ex${this.state.experience.length}`),
-            startJob: document.getElementById("startJob").value,
-            endJob: document.getElementById("endJob").value,
+            start: document.getElementById("startJob").value,
+            end: document.getElementById("endJob").value,
             company: document.getElementById("company").value,
-            jobPosition: document.getElementById("jobPosition").value
+            jobPosition: document.getElementById("jobPosition").value,
+            jobResume: document.getElementById("jobResume").value
         }
         this.setState(prevState=>({
             experience: [
@@ -107,7 +115,6 @@ class MakeCV extends Component {
             ]
         }))
     }
-
 
     handleChange = e => {
         const key = e.target.name
@@ -124,7 +131,7 @@ class MakeCV extends Component {
             <React.Fragment>
                 <Header name="Make CV" />
                 <div className="container">
-                    <div className="row">
+                    <div className ="row">
                         <div className="col">
                             <InfoForm
                             onClick={this.handleInfoClick}
@@ -135,8 +142,14 @@ class MakeCV extends Component {
                             <CoursesForm onClick={this.handleCourseClick} />
                             <SkillsForm onClick={this.handleSkillClick} />
                             <ExperienceForm onClick={this.handleExperienceClick} />
+                            <div className="form-group">
+                                <a href="#showCV" className="btn btn-primary">See preview</a>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div id="showCV">
+                    <ShowCV values={this.state} />
                 </div>
             </React.Fragment>
         )
