@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cv-maker/static/css/main.92cd3473.chunk.css",
+    "main.js": "/cv-maker/static/js/main.d861d796.chunk.js",
+    "main.js.map": "/cv-maker/static/js/main.d861d796.chunk.js.map",
+    "runtime~main.js": "/cv-maker/static/js/runtime~main.3a10a264.js",
+    "runtime~main.js.map": "/cv-maker/static/js/runtime~main.3a10a264.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/cv-maker/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.aeb5738c.chunk.js": "/cv-maker/static/js/2.aeb5738c.chunk.js",
+    "static/js/2.aeb5738c.chunk.js.map": "/cv-maker/static/js/2.aeb5738c.chunk.js.map",
+    "index.html": "/cv-maker/index.html",
+    "precache-manifest.61862b5158b0247352c6a6667e4bd8a8.js": "/cv-maker/precache-manifest.61862b5158b0247352c6a6667e4bd8a8.js",
+    "service-worker.js": "/cv-maker/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/cv-maker/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.92cd3473.chunk.css.map": "/cv-maker/static/css/main.92cd3473.chunk.css.map",
+    "static/media/courses.png": "/cv-maker/static/media/courses.b95eaade.png",
+    "static/media/education.svg": "/cv-maker/static/media/education.3bad0033.svg",
+    "static/media/github-logo.png": "/cv-maker/static/media/github-logo.57afe7f0.png",
+    "static/media/skills.png": "/cv-maker/static/media/skills.60a09af7.png",
+    "static/media/twitter-logo.png": "/cv-maker/static/media/twitter-logo.bbc9e187.png",
+    "static/media/wordpress-logo.png": "/cv-maker/static/media/wordpress-logo.2fd34f74.png"
+  }
+}
