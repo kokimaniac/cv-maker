@@ -1,6 +1,7 @@
 ### **cv-maker**
-This is a basic Curriculum Vitae maker made it for practical.
+This is a basic Curriculum Vitae maker made it for practical purposes.
 Is made it with react.
 
-### Run `npm run start`
-A local dev server is open in the 3000 port `localhost:3000`
+### Run first `npm install`
+
+### Then `npm run start`
