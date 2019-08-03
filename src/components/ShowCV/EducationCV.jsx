@@ -1,9 +1,15 @@
 import React from 'react'
+//component
+import IconCV from './IconCV.jsx'
+//icon
+import icon from '../icons/education.svg'
+
 
 function EducationCV (props) {
     const edu = props.items.education
     return (
         <div id="educationContainer">
+            <IconCV source={icon} name="education" />
             <div className="title">Education</div>
             <ul>
                 {edu.map((item, index)=>{

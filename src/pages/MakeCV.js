@@ -35,6 +35,16 @@ class MakeCV extends Component {
         }
     }
 
+    justUpdated = (data) => {
+        for(let value of Object.values(data)) {
+            if (value === "") {
+                return console.log("This field is empty")
+            } else {
+                return console.log("Great!")
+            }
+        }
+    }
+
     handleInfoClick = () => {
         let servSelect = document.getElementById("contactService")
         let data = {
@@ -49,10 +59,7 @@ class MakeCV extends Component {
                 ...prevState.contact, {...data}
             ]
         }))
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        console.log(prevProps)
+        this.justUpdated(this.state.info)
     }
 
     handleCourseClick = () => {

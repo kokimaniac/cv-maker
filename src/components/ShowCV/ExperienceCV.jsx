@@ -1,11 +1,16 @@
 import React from 'react'
 //styles
 import './styles/ExperienceCV.css'
+//components
+import IconCV from './IconCV.jsx'
+//icon
+import logo from '../icons/experience.png'
 
 function ExperienceCV (props) {
     const experienceList = props.name.experience
     return (
        <div id="experienceContainer">
+            <IconCV source={logo} name="experience" />
             <div className="title">Experience</div>
             {experienceList.map(item=>{
                 return (

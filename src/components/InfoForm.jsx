@@ -126,7 +126,7 @@ function InfoForm (props) {
             </div>
             <div className="form-row">
                 <div className="form-group col-2">
-                    <select className="form-control" name="contactService" id="contactService">
+                    <select className="form-control" name="contactService" id="contactService" required={true}>
                         {contacts.map((item, index)=>{
                             return (
                                 <option key={index} value={item.icon}>

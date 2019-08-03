@@ -1,9 +1,14 @@
 import React from 'react'
+//component
+import IconCV from './IconCV.jsx'
+//icon
+import icon from '../icons/courses.png'
 
 function CoursesCV (props) {
     const coursesList = props.items.courses
     return (
         <div id="coursesContainer">
+            <IconCV source={icon} name="courses" />
             <div className="title">Courses</div>
             <ul>
                 {coursesList.map(item=>{
